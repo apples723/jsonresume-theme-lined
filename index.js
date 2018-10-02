@@ -37,6 +37,10 @@ resumeObject.basics.capitalLabel = (resumeObject.basics.label).toUpperCase();
 		if (resumeObject.basics.profiles[0].network) {
 			_.each(resumeObject.basics.profiles, function(w){
 			  resumeObject.profilesBool = true;
+			  if ((w.network == 'Linkedin' || w.network == 'linkedin' || w.network == 'LinkedIn')) {
+					w.url = "https://linkedin.com/in/" + w.username;
+					
+				}
 			});
 		}
 	}
@@ -435,6 +439,98 @@ resumeObject.basics.capitalLabel = (resumeObject.basics.label).toUpperCase();
 					if (a.highlights[0]) {
 						if (a.highlights[0] != "") {
 							a.volunterHighlights = true;
+						}
+					}
+				}
+			});
+		}
+	}
+	if (resumeObject.project) {
+		if (resumeObject.project[0].role) {
+			resumeObject.projectBool = true;
+			_.each(resumeObject.project, function(a){
+				a.startDateYear = (a.startDate || "").substr(0,4);
+				switch ((a.startDate || "").substr(5,2)) {
+					case '01':
+						a.startDateMonth = "January ";
+						break;
+					case '02':
+						a.startDateMonth = "February ";
+						break;
+					case '03':
+						a.startDateMonth = "March ";
+						break;
+					case '04':
+						a.startDateMonth = "April ";
+						break;
+					case '05':
+						a.startDateMonth = "May ";
+						break;
+					case '06':
+						a.startDateMonth = "June ";
+						break;
+					case '07':
+						a.startDateMonth = "July ";
+						break;
+					case '08':
+						a.startDateMonth = "August ";
+						break;
+					case '09':
+						a.startDateMonth = "September ";
+						break;
+					case '10': 
+						a.startDateMonth = "October ";
+						break;
+					case '11':
+						a.startDateMonth = "November ";
+						break;
+					case '12':
+						a.startDateMonth = "December ";
+						break;
+				}
+				a.endDateYear = (a.endDate || "").substr(0,4);
+				switch ((a.endDate || "").substr(5,2)) {
+					case '01':
+						a.endDateMonth = "January ";
+						break;
+					case '02':
+						a.endDateMonth = "February ";
+						break;
+					case '03':
+						a.endDateMonth = "March ";
+						break;
+					case '04':
+						a.endDateMonth = "April ";
+						break;
+					case '05':
+						a.endDateMonth = "May ";
+						break;
+					case '06':
+						a.endDateMonth = "June ";
+						break;
+					case '07':
+						a.endDateMonth = "July ";
+						break;
+					case '08':
+						a.endDateMonth = "August ";
+						break;
+					case '09':
+						a.endDateMonth = "September ";
+						break;
+					case '10': 
+						a.endDateMonth = "October ";
+						break;
+					case '11':
+						a.endDateMonth = "November ";
+						break;
+					case '12':
+						a.endDateMonth = "December ";
+						break;
+				}
+				if (a.highlights) {
+					if (a.highlights[0]) {
+						if (a.highlights[0] != "") {
+							a.projectHighlights = true;
 						}
 					}
 				}

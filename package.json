@@ -15,18 +15,18 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/apples723/jsonresume-theme-lined.git"
   },
   "keywords": [
     "json",
     "jsonresume",
     "theme",
     "line",
-    "jsonresume-theme"
+    "jsonresume-theme",
     "one page"
   ],
   "bugs": {
-    "url": ""
+    "url": "https://github.com/apples723/jsonresume-theme-lined/issues"
   },
-  "homepage": ""
+  "homepage": "https://github.com/apples723/jsonresume-theme-lined"
 }

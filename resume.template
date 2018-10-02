@@ -1,12 +1,19 @@
 <!DOCTYPE html>
+<!-- 
+	This awesome resume was created by Grant Siders using the JSON Resume Schema: https://jsonresume.org
+	It uses the lined theme designed by Grant Siders: https://github.com/apples723/jsonresume-theme-lined
+-->
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
+	<meta name="author" content="Grant Siders">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{basics.name}}</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	
 	<style>
 	.name{
 		font-size: 25px;
@@ -133,7 +140,6 @@
 		margin: 0px; 
 		padding: 5px; 
 		text-align:center;
-		min-height:26.5cm;
 		padding: 10px;
 	}
 	.rightcolumn{
@@ -147,6 +153,18 @@
 	}
 	.no-style-a{
 		color:inherit;
+	}
+	.proj-role{
+		line-height:.5;
+		font-size: 15px
+	}
+	.pro-details{
+		margin-top: 10px;
+		line-height: .5;
+		font-size: 12px;
+	}
+	.pro-highlight{
+		margin-top: 5px;
 	}
 	</style>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
@@ -168,11 +186,12 @@
             <p class="contact-info"> 
               <i class="fa fa-phone"></i>{{basics.phone}}
               <br>
-              <i class="fa fa-envelope"></i> <a href="mailto:{{basics.email}}">{{basics.email}}</a>
+              <i class="fa fa-envelope"></i><a href="mailto:{{basics.email}}">{{basics.email}}</a>
               <br>
 			  {{#profilesBool}}
 			  {{#basics.profiles}}
-              <a class="no-style-a" href="{{url}}"><i class=" fab fa-{{icon}}"></i></a>
+              <i class=" fab fa-{{icon}}"></i><a class="no-style-a" href="{{url}}">{{user}}</a>
+			  </br>
 			  {{/basics.profiles}}
 			  {{/profilesBool}}
             </p>
@@ -180,7 +199,7 @@
         </div>
        
           <div class="section-heading left-heading">
-            <i class="far fa-dot-circle"></i>Objective
+            <i class="far fa-dot-circle"></i>Summary
           </div>
 		 <div class="row">
 	      	<div class="row-separator red-line-left">&nbsp;</div>
@@ -290,8 +309,37 @@
 		{{/volunteer}}
 		</div>    
          {{/volunteerBool}}
-      </div><!-- close right column -->
-    </div>
-  </div>
+		 <div class="row first">
+      		<span class="section-heading"><i class="fas fa-bookmark"></i>Projects</span>    	
+        </div>
+		<div class="row-separator red-line">&nbsp;</div>
+		{{#projectBool}}
+		{{#project}}
+		
+      	<div class="row">
+      		<div class="seven columns">
+			<div class="job">{{title}}</a></div>
+			<div class="proj-role">{{role}}</div>
+			</div> 
+			<div class="five columns">
+			<div class="pro-details"><a class="no-style-a" href="{{url}}">{{url}}</a></div>
+			<div class="pro-details">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+			</div>
+		</div>
+			<div class="pro-highlight">
+			 {{#projectHighlights}}
+					<ul class="job-ul">
+						{{#highlights}}
+						<li class="job-highlights">{{.}}</li>
+						{{/highlights}}
+					</ul>
+			{{/projectHighlights}}
+			</div>
+	
+		{{/project}} 
+         {{/projectBool}}
+      </div><!-- close right column -->   
+	  </div> <!-- close all row -->
+    </div> <!-- close container -->
   </body>
 </html>
