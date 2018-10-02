@@ -4,7 +4,8 @@
 - Sectioned off by lines
 - Uses FontAwesome Icons
 - Uses the [JSON Resume Schema](https://github.com/jsonresume/resume-schema)
-- Generated with [hackmyresume](https://github.com/hacksalot/HackMyResume)
+- Resum generated with [hackmyresume](https://github.com/hacksalot/HackMyResume)
+- [live demo](http://grantsiders.com/resume)
 # Two Versions 
 - PDF - More suitable for printing 
 - WEB - More suitable for the web.
