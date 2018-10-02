@@ -9,8 +9,8 @@
   "author": "Grant Siders",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^2.4.1",
-    "mustache": "^0.8.2",
+    "lodash": "4.0.0",
+    "mustache": "3.0.0",
     "resume-schema": "0.0.16"
   },
   "repository": {
