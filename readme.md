@@ -12,4 +12,4 @@
 Only change between the two is that the web version has Icons for social media links instead of usernames/urls. 
 
 
-Template design by [Grant Siders](grantsiders.com)
+Template design by [Grant Siders](http://grantsiders.com)
