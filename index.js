@@ -561,8 +561,10 @@ resumeObject.basics.capitalLabel = (resumeObject.basics.label).toUpperCase();
 			resumeObject.referencesBool = true;
 		}
 	}
-
-	var theme = fs.readFileSync(__dirname + '/resume.template', 'utf8');
+	//PDF Version
+	//var theme = fs.readFileSync(__dirname + '/resume-pdf.template', 'utf8');
+	//Web Version - Only differince is Social Media Links
+	var theme = fs.readFileSync(__dirname + '/resume-web.template', 'utf8');
 	var resumeHTML = Mustache.render(theme, resumeObject);
 	
 
