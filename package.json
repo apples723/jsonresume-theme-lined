@@ -1,0 +1,32 @@
+{
+  "name": "jsonresume-theme-lined",
+  "version": "1.0.1",
+  "description": "A modern one page resume, sectioned by lines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grant Siders",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "mustache": "^0.8.2",
+    "resume-schema": "0.0.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "json",
+    "jsonresume",
+    "theme",
+    "line",
+    "jsonresume-theme"
+    "one page"
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
