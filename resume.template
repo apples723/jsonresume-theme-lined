@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	
 	<style>
+		.profile-pic{
+		width: 128px;
+		height: 128px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		border-radius: 50%;
+	}
 	.name{
 		font-size: 25px;
 		font-weight: Bold;
@@ -27,18 +34,15 @@
 		margin:0;
 	}
 	.occupation{
-		font-size:15px;
-	}
-	.contact-info{
-		margin:0px 0px 15px 15px;
-
+		font-size:25px;
 	}
 	.contact-box{
 		float:right;
 		text-align:left;
-		font-size: 0.8em;		
+		font-size: 15px;		
 		margin: 0px;
 		width:100%;
+		margin:0px 0px 15px 15px;
 	}
 	.tag-cloud{
 		width:100%;
@@ -47,32 +51,20 @@
 	i{
 		margin-right:10px;
 	}
-	.edu-title{
-		font-weight: bold;
-		font-size: 19px;
+	.objective-statement{
+		font-style: italic;
+		font-size:15px;
+		margin-left:20px;
+		text-align: left;
 	}
-	.edu-details{
-		line-height: 1;
-		font-size: 12px;
-	}
-	.edu-school{
-		font-weight: bold;
+	.job{
+		font-size: 20px;
+		font-weight:bold;
 	}
 	.date{
 		line-height: .5;
 		font-size: 15px;
 		margin-bottom: 5px;
-	}
-	.institution{
-		color: #000;
-		font-weight:bold;
-		letter-spacing: 1px;
-		margin-bottom: 0;
-		line-height: 1;
-	}
-	.job{
-		font-size: 19px;
-		font-weight:bold;
 	}
 	.job-ul{
 		padding-left: 15px;
@@ -81,20 +73,57 @@
 		margin-bottom: 0;
 	}
 	.job-highlights{
-		font-size:12px;
+		font-size:15px;
 		line-height: 1;
 		margin-bottom: .3rem;
 	}
+	.edu-school{
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.edu-degree{
+		font-weight: bold;
+	}
+	.edu-details-web .edu-date{
+		margin-top: 10px;
+	}
+	.edu-details-web{
+		line-height: 1;
+		margin-top: 5px;
+	}
+	.edu-details-print{
+		display: none;
+	}
+	.institution{
+		color: #000;
+		font-weight:bold;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+		line-height: 1;
+	}
+	
 	.skills{	
 		margin-left: 20px;
-		font-size: 0.8em;
+		font-size: 15px;
 		text-align: start;
 	}
-
-	.graph{
-		color:#6412B2;
-		margin-left:20px;
-		font-size:0.9em;
+	.proj-role{
+		line-height:.5;
+		font-size: 15px
+	}
+	.proj-details{
+		margin-top: 10px;
+		line-height: .5;
+		font-size: 15px;
+	}
+	.proj-web .proj-details-date{
+		margin-top: 10px;
+	}
+	.proj-highlight{
+		margin-top: 5px;
+	}
+	.proj-print{
+		display: none;
 	}
 	.first{
 		margin-top:20px;
@@ -112,83 +141,119 @@
 	.section-heading{
 		color:#FF0000;
 		font-weight:bold;
-		font-size:20px;
+		font-size:25px;
 	}
 	.left-heading{
-		text-align: left;
-		margin: 0px 0px 0px 20px;
+		text-align: center;
+		color:#FF0000;
+		font-weight:bold;
+		font-size: 25px;
 	}
 
-	.left-column-section-heading{
-		letter-spacing: 4px;
-		font-size: 1.2em;
-		text-align:left;
-		margin: 0px 0px 15px 15px;
-		vertical-align: middle;
-
-	}
-	.left-column-section-heading i{
-		margin-right:0px;
-	}
-	.objective-statement{
-		font-style: italic;
-		font-size:0.8em;
-		margin-left:20px;
-		text-align: left;
-	}
+	
 	.leftcolumn{ 
-		margin: 0px; 
 		padding: 5px; 
 		text-align:center;
-		padding: 10px;
 	}
 	.rightcolumn{
 		min-height:26.5cm; 
 		margin: 0px; 
 		padding: 5px; 
-		padding: 10px;
 	}
-	.print{
-		width:21cm;
-	}
+
 	.no-style-a{
 		color:inherit;
 	}
-	.proj-role{
-		line-height:.5;
-		font-size: 15px
-	}
-	.pro-details{
-		margin-top: 10px;
-		line-height: .5;
-		font-size: 12px;
-	}
-	.pro-highlight{
-		margin-top: 5px;
-	}
-	.profile-pic{
-		width: 128px;
-		height: 128px;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		border-radius: 50%;
-	}
+	
 	.prof-print{
 		display:none;
 	}
 	.prof-web{	
 		margin-top: 5px;
 	}
+	
 	@media print{
 		.prof-print{
 			display: block;
 		}
-		.prof-web{
+		.profile-pic, .prof-web {
 			display: none;
 		}
-		.profile-pic{
-			display:none;
+		.first{
+			margin-top: 0px;
 		}
+		.name{
+			font-size: 25px;
+		}
+		.occupation{
+            font-size:20px;
+			margin-bottom: 5px;
+        }
+		.contact-box{
+			margin: 0px;
+			font-size: 15px;
+		}
+		.objective-statement{
+			font-size: 15px;
+		}
+		
+		.job{
+			font-size: 18px;
+		}
+		.date{
+			font-size: 15px;
+		}
+		.job-highlights{
+			font-size: 14px;
+		}
+		.edu-degree{
+			font-size: 15px;
+			line-height: .5;
+		}
+		.edu-school{
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.edu-date{
+			line-height:2;
+		}
+		.edu-details-print{
+			display: block;
+		}
+		.edu-details-web{
+			display: none;
+		}
+		.proj-details{
+			font-size: 15px;
+			margin-left: 0px;
+		}
+		.proj-highlight{
+			font-size: 14px;
+			margin-top: 0px;
+		}
+		.proj-details-date{	
+			line-height: 1;
+		}
+		.proj-web{
+			display: none;
+		} 
+		.proj-print{
+			display: block;
+		}
+		.left-heading{
+			font-size: 20px;
+		}
+		.section-heading{
+			font-size: 20px;
+			
+		}
+		.leftcolumn{ 
+			padding: 0px;
+		}
+		.rightcolumn{
+			padding: 0px;
+		}
+			
 	}
 	</style>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
@@ -204,15 +269,14 @@
 			<img src= "{{basics.picture}}" width= "75px" height= "75px" class= "profile-pic">
 			</br>
       		<span class="name">{{basics.name}} </strong></span>
-        	<p class="occupation">{{basics.label}}</p>
+        	<div class="occupation">{{basics.label}}</div>
         </div>
         
         <div class="row">
           <div class="contact-box">
-            <div class="contact-info"> 
-              <i class="fa fa-phone"></i>{{basics.phone}}
+              <i class="phone fa fa-phone"></i>{{basics.phone}}
               <br>
-              <i class="fa fa-envelope"></i><a href="mailto:{{basics.email}}">{{basics.email}}</a>
+              <i class="email fa fa-envelope"></i><a class="no-style-a" href="mailto:{{basics.email}}">{{basics.email}}</a>
               <br>
 			   
 			  
@@ -239,11 +303,10 @@
 			  </div> 
 			  <!-- End Print Version -->
 			 
-            </div>
           </div>
         </div>
        
-          <div class="section-heading left-heading">
+          <div class="left-heading">
             <i class="far fa-dot-circle"></i>Summary
           </div>
 		 <div class="row">
@@ -251,14 +314,14 @@
 	      </div>
         <div class="row">
         <div class="row">
-          <p class="objective-statement">
+          <div class="objective-statement">
              {{basics.summary}}
-          </p>
+          </div>
         </div>
 		</div>
 		 
         <div class="row">
-          <div class="section-heading left-heading">
+          <div class="left-heading">
             <i class="far fa-lightbulb"></i>Key Skills
           </div>
 		  </div>
@@ -274,7 +337,7 @@
 		{{/skillsBool}}
 		
 		<div class="row">
-          <div class="section-heading left-heading">
+          <div class="left-heading">
             <i class="fa fa-certificate"></i>Certifications
           </div>
 		  </div>
@@ -315,7 +378,7 @@
        
 		{{/work}}
 		{{/workBool}}
-        <div class="row first">
+        <div class="row">
       		<span class="section-heading"><i class="fa fa-graduation-cap"></i>Education</span>    	
         </div>
 		{{#educationBool}}
@@ -323,8 +386,20 @@
 		
         <div class="row-separator red-line">&nbsp;</div>
       	<div class="row">
-				<div class="edu-title">{{studyType}} in {{area}}</div>
-				<div class="edu-details"><span class="edu-school">{{institution}}</span> - {{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				<div class="edu-details-web">
+				<div class="eight columns">
+				<div class="edu-school">{{institution}}</div>
+					<div class="edu-degree">{{studyType}} in {{area}}</div>
+				</div>
+				<div class="four columns">
+					<div class="edu-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
+				</div>
+				<div class="edu-details-print">
+					<div class="edu-school">{{institution}}</div>
+					<div class="edu-degree">{{studyType}} in {{area}}</div>
+					<div class="edu-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
 		</div>
        
 		{{/education}}
@@ -332,7 +407,7 @@
 		
 		
     
-      	<div class="row first">
+      	<div class="row">
       		<span class="section-heading"><i class="fas fa-hands-helping"></i>Volunteer</span>    	
         </div>
 		<div class="row-separator red-line">&nbsp;</div>
@@ -354,7 +429,7 @@
 		{{/volunteer}}
 		</div>    
          {{/volunteerBool}}
-		 <div class="row first">
+		 <div class="row">
       		<span class="section-heading"><i class="fas fa-bookmark"></i>Projects</span>    	
         </div>
 		<div class="row-separator red-line">&nbsp;</div>
@@ -362,16 +437,33 @@
 		{{#project}}
 		
       	<div class="row">
-      		<div class="seven columns">
-			<div class="job">{{title}}</a></div>
-			<div class="proj-role">{{role}}</div>
-			</div> 
-			<div class="five columns">
-			<div class="pro-details"><a class="no-style-a" href="{{url}}">{{url}}</a></div>
-			<div class="pro-details">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+			<!-- Web Formating--> 
+			<div class="proj-web">
+				<div class="eight columns">
+					<div class="job"><a href="{{url}}">{{title}}</a></div>
+					<div class="proj-role">{{role}}</div>
+				</div> 
+				<div class="four columns">
+					<div class="proj-details-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
 			</div>
+			<!-- End Web Formating -->
+			<!-- Print Formating --> 
+			<div class="proj-print">
+				<div class="six columns">
+					<div class="job">{{title}}</a></div>
+					<div class="proj-role">{{role}}</div>
+				</div> 
+				<div class="six columns">
+					<div class="proj-details-url"><a class="no-style-a" href="{{url}}">{{url}}</a></div>
+					<div class="proj-details-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
+			</div>
+			<!-- End Web Formating --> 
+			
+			
 		</div>
-			<div class="pro-highlight">
+			<div class="proj-highlight">
 			 {{#projectHighlights}}
 					<ul class="job-ul">
 						{{#highlights}}
@@ -382,7 +474,7 @@
 			</div>
 	
 		{{/project}} 
-         {{/projectBool}}
+        {{/projectBool}}
       </div><!-- close right column -->   
 	  </div> <!-- close all row -->
     </div> <!-- close container -->
