@@ -4,8 +4,8 @@
 - Sectioned off by lines
 - Uses FontAwesome Icons
 - Two Version: Print and Web
-= Skeleton CSS for lightweight grid layout
-= Self contained
+- Skeleton CSS for lightweight grid layout
+- Self contained
 - Uses the [JSON Resume Schema](https://github.com/jsonresume/resume-schema)
 - Resum generated with [hackmyresume](https://github.com/hacksalot/HackMyResume)
 - [live demo](http://grantsiders.com/resume)
