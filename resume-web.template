@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- 
+	This awesome resume was created by Grant Siders using the JSON Resume Schema: https://jsonresume.org
+	It uses the lined theme designed by Grant Siders: https://github.com/apples723/jsonresume-theme-lined
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="author" content="Grant Siders">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{basics.name}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	
+	<style>
+		.profile-pic{
+		width: 128px;
+		height: 128px;
+		margin-top: 0px;
+		margin-bottom: 5px;
+		border-radius: 50%;
+	}
+	.name{
+		font-size: 25px;
+		font-weight: Bold;
+		
+	}
+	.big-icon{
+		font-size: 32px;
+	}
+	h1,h2,h3,h4,p {
+		margin:0;
+	}
+	.occupation{
+		font-size:25px;
+	}
+	.contact-box{
+		float:right;
+		text-align:left;
+		font-size: 15px;		
+		margin: 0px;
+		width:100%;
+		margin:0px 0px 15px 15px;
+	}
+	.tag-cloud{
+		width:100%;
+		min-height:200px;
+	}
+	i{
+		margin-right:10px;
+	}
+	.objective-statement{
+		font-style: italic;
+		font-size:15px;
+		margin-left:20px;
+		text-align: left;
+	}
+	.job{
+		font-size: 20px;
+		font-weight:bold;
+	}
+	.date{
+		line-height: .5;
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+	.job-ul{
+		padding-left: 15px;
+		margin-top:15px;
+		list-style: circle;
+		margin-bottom: 0;
+	}
+	.job-highlights{
+		font-size:15px;
+		line-height: 1;
+		margin-bottom: .3rem;
+	}
+	.edu-school{
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.edu-degree{
+		font-weight: bold;
+	}
+	.edu-details-web .edu-date{
+		margin-top: 10px;
+	}
+	.edu-details-web{
+		line-height: 1;
+		margin-top: 5px;
+	}
+	.edu-details-print{
+		display: none;
+	}
+	.institution{
+		color: #000;
+		font-weight:bold;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+		line-height: 1;
+	}
+	
+	.skills{	
+		margin-left: 20px;
+		font-size: 15px;
+		text-align: start;
+	}
+	.proj-role{
+		line-height:.5;
+		font-size: 15px
+	}
+	.proj-details{
+		margin-top: 10px;
+		line-height: .5;
+		font-size: 15px;
+	}
+	.proj-web .proj-details-date{
+		margin-top: 10px;
+	}
+	.proj-highlight{
+		margin-top: 5px;
+	}
+	.proj-print{
+		display: none;
+	}
+	.first{
+		margin-top:20px;
+	}
+	.row-separator{
+		height:2px;
+	}
+	.red-line{
+		border-bottom: solid 2px #FF0000;
+	}
+	.red-line-left{
+		border-bottom: solid 2px #FF0000;
+		margin: 5px 0px 10px 0px;
+	}
+	.section-heading{
+		color:#FF0000;
+		font-weight:bold;
+		font-size:25px;
+	}
+	.left-heading{
+		text-align: center;
+		color:#FF0000;
+		font-weight:bold;
+		font-size: 25px;
+	}
+
+	
+	.leftcolumn{ 
+		padding: 5px; 
+		text-align:center;
+	}
+	.rightcolumn{
+		min-height:26.5cm; 
+		margin: 0px; 
+		padding: 5px; 
+	}
+
+	.no-style-a{
+		color:inherit;
+	}
+	
+	.prof-print{
+		display:none;
+	}
+	.prof-web{	
+		margin-top: 10px;
+	}
+	.container {
+		max-width: 80%;
+	}
+	
+	
+	</style>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet">
+
+    </style>
+  </head>
+  <body>
+	 <div class="container" style="max-width:80%;">
+    
+    <div class="row">
+      <div class="four columns leftcolumn">
+      	<div class="row first">
+			<img src= "{{basics.picture}}" width= "75px" height= "75px" class= "profile-pic">
+			</br>
+      		<span class="name">{{basics.name}} </strong></span>
+        	<div class="occupation">{{basics.label}}</div>
+             <a href="/resume/resume.pdf" target="_blank" class="button" style="margin-top:5px;color:red;">Download as PDF</a>
+        </div>
+        
+        <div class="row">
+          <div class="contact-box">
+		  		 <div class="row">
+          <div class="left-heading">
+            <span class="section-heading"><i class="far fa-id-card"></i>Contact</span>
+          </div>
+		  </div>
+		<div class="row">
+	      	<div class="row-separator red-line-left">&nbsp;</div>
+	      </div>
+              <i class="phone fa fa-phone"></i>{{basics.phone}}
+              <br>
+              <i class="email fa fa-envelope"></i><a class="no-style-a" href="mailto:{{basics.email}}">{{basics.email}}</a>
+              <br>
+			   
+			  
+			  <!-- Profiles - Web Version -->
+			  <div class="prof-web">
+			  {{#profilesBool}}
+			  <center>
+			  {{#basics.profiles}}
+              <a class="no-style-a" href="{{url}}"><i class="big-icon fab fa-{{icon}}"></i></a>
+			  {{/basics.profiles}}
+			  <center>
+			  {{/profilesBool}}
+			  </div>
+			  <!-- End web version -->
+			  
+			  <!-- Profiles - Print Version -->
+			  <div class="prof-print">
+			  {{#profilesBool}}
+			  {{#basics.profiles}}
+			  <i class=" fab fa-{{icon}}"></i><a class="no-style-a" href="{{url}}">{{user}}</a>
+			  <br>
+			  {{/basics.profiles}}
+			  {{/profilesBool}}
+			  </div> 
+			  <!-- End Print Version -->
+			 
+          </div>
+        </div>
+       
+          <div class="left-heading">
+            <i class="far fa-dot-circle"></i>Summary
+          </div>
+		 <div class="row">
+	      	<div class="row-separator red-line-left">&nbsp;</div>
+	      </div>
+        <div class="row">
+        <div class="row">
+          <div class="objective-statement">
+             {{basics.summary}}
+          </div>
+        </div>
+		</div>
+		 
+        <div class="row">
+          <div class="left-heading">
+            <span class="section-heading"><i class="far fa-lightbulb"></i>Key Skills</span>
+          </div>
+		  </div>
+		<div class="row">
+	      	<div class="row-separator red-line-left">&nbsp;</div>
+	      </div>
+		{{#skillsBool}}
+        <div class="row skills">
+			{{#skills}}
+			<i class="fa fa-check"></i>{{name}}</br>
+			{{/skills}}
+        </div>
+		{{/skillsBool}}
+		
+		<div class="row">
+          <div class="left-heading">
+            <i class="fa fa-certificate"></i>Certifications
+          </div>
+		  </div>
+		<div class="row">
+	      	<div class="row-separator red-line-left">&nbsp;</div>
+	      </div>
+		{{#awardsBool}}
+        <div class="row skills">
+			{{#awards}}
+			<i class="fa fa-check"></i>{{title}}</br>
+			{{/awards}}
+        </div>
+		{{/awardsBool}}
+	
+      </div><!-- end left column -->
+	  <!-- summary --> 
+       <div class="eight columns rightcolumn">
+      	<div class="row first">
+      		<span class="section-heading"><i class="fa fa-dot-circle"></i>Summary</span>    	
+        </div>
+		<div class="row-separator red-line">&nbsp;</div>
+		<div class="row">
+          <div class="objective-statement">
+             {{basics.summary}}
+          </div>
+        </div>
+	  <!-- work --> 
+      
+      	<div class="row first">
+      		<span class="section-heading"><i class="fa fa-suitcase"></i>Work Experience</span>    	
+        </div>
+		<div class="row-separator red-line">&nbsp;</div>
+		{{#workBool}}
+		{{#work}}
+		
+      	<div class="row">
+      		<div>
+			<div class="job">{{position}}, {{company}}</div>
+      		<div class="date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+			 {{#workHighlights}}
+					<ul class="job-ul">
+						{{#highlights}}
+						<li class="job-highlights">{{.}}</li>
+						{{/highlights}}
+					</ul>
+					{{/workHighlights}}
+			</div>
+		</div>    	
+       
+		{{/work}}
+		{{/workBool}}
+        <div class="row">
+      		<span class="section-heading"><i class="fa fa-graduation-cap"></i>Education</span>    	
+        </div>
+		{{#educationBool}}
+		{{#education}}
+		
+        <div class="row-separator red-line">&nbsp;</div>
+      	<div class="row">
+				<div class="edu-details-web">
+				<div class="eight columns">
+				<div class="edu-school">{{institution}}</div>
+					<div class="edu-degree">{{studyType}} in {{area}}</div>
+				</div>
+				<div class="four columns">
+					<div class="edu-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
+				</div>
+				<div class="edu-details-print">
+					<div class="edu-school">{{institution}}</div>
+					<div class="edu-degree">{{studyType}} in {{area}}</div>
+					<div class="edu-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
+		</div>
+       
+		{{/education}}
+		{{/educationBool}}
+		
+		
+    
+      	<div class="row">
+      		<span class="section-heading"><i class="fas fa-hands-helping"></i>Volunteer</span>    	
+        </div>
+		<div class="row-separator red-line">&nbsp;</div>
+		{{#volunteerBool}}
+		{{#volunteer}}
+		
+      	<div class="row">
+      		<div>
+			<div class="job">{{position}}, {{company}}</div>
+      		<div class="date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+			 {{#volunterHighlights}}
+					<ul class="job-ul">
+						{{#highlights}}
+						<li class="job-highlights">{{.}}</li>
+						{{/highlights}}
+					</ul>
+					{{/volunterHighlights}}
+			</div>
+		{{/volunteer}}
+		</div>    
+         {{/volunteerBool}}
+		 <div class="row">
+      		<span class="section-heading"><i class="fas fa-bookmark"></i>Projects</span>    	
+        </div>
+		<div class="row-separator red-line">&nbsp;</div>
+		{{#projectBool}}
+		{{#project}}
+		
+      	<div class="row">
+			<!-- Web Formating--> 
+			<div class="proj-web">
+				<div class="eight columns">
+					<div class="job"><a href="{{url}}">{{title}}</a></div>
+					<div class="proj-role">{{role}}</div>
+				</div> 
+				<div class="four columns">
+					<div class="proj-details-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
+			</div>
+			<!-- End Web Formating -->
+			<!-- Print Formating --> 
+			<div class="proj-print">
+				<div class="six columns">
+					<div class="job">{{title}}</a></div>
+					<div class="proj-role">{{role}}</div>
+				</div> 
+				<div class="six columns">
+					<div class="proj-details-url"><a class="no-style-a" href="{{url}}">{{url}}</a></div>
+					<div class="proj-details-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
+				</div>
+			</div>
+			<!-- End Web Formating --> 
+			
+			
+		</div>
+			<div class="proj-highlight">
+			 {{#projectHighlights}}
+					<ul class="job-ul">
+						{{#highlights}}
+						<li class="job-highlights">{{.}}</li>
+						{{/highlights}}
+					</ul>
+			{{/projectHighlights}}
+			</div>
+	
+		{{/project}} 
+        {{/projectBool}}
+      </div><!-- close right column -->   
+	  </div> <!-- close all row -->
+    </div> <!-- close container -->
+  </body>
+</html>

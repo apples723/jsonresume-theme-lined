@@ -18,7 +18,7 @@
 		.profile-pic{
 		width: 128px;
 		height: 128px;
-		margin-top: 5px;
+		margin-top: 0px;
 		margin-bottom: 5px;
 		border-radius: 50%;
 	}
@@ -83,9 +83,10 @@
 	}
 	.edu-degree{
 		font-weight: bold;
+        margin-top: 1px;
 	}
 	.edu-details-web .edu-date{
-		margin-top: 10px;
+		margin-top: 2px;
 	}
 	.edu-details-web{
 		line-height: 1;
@@ -102,14 +103,14 @@
 		line-height: 1;
 	}
 	
-	.skills{	
-		margin-left: 20px;
-		font-size: 15px;
-		text-align: start;
+	
+	.skills-separator{
+		margin: 5px;
 	}
-	.proj-role{
+	.proj-web .proj-role{
 		line-height:.5;
 		font-size: 15px
+        font-weight: bold;
 	}
 	.proj-details{
 		margin-top: 10px;
@@ -117,7 +118,7 @@
 		font-size: 15px;
 	}
 	.proj-web .proj-details-date{
-		margin-top: 10px;
+		margin-top: 1px;
 	}
 	.proj-highlight{
 		margin-top: 5px;
@@ -193,6 +194,10 @@
 			margin: 0px;
 			font-size: 15px;
 		}
+        .contact-box-2{
+			float: right;
+			font-size: 15px;
+		}
 		.objective-statement{
 			font-size: 15px;
 		}
@@ -215,7 +220,7 @@
 			font-weight: bold;
 		}
 		.edu-date{
-			line-height:2;
+			line-height:1;
 		}
 		.edu-details-print{
 			display: block;
@@ -263,37 +268,25 @@
   </head>
   <body>
 	 <div class="container print">
-    <div class="row">
-      <div class="four columns leftcolumn">
-      	<div class="row first">
+     <div class="row"> 
+      <div style="float: left; margin: auto;">
+ 
 			<img src= "{{basics.picture}}" width= "75px" height= "75px" class= "profile-pic">
 			</br>
       		<span class="name">{{basics.name}} </strong></span>
         	<div class="occupation">{{basics.label}}</div>
-        </div>
-        
-        <div class="row">
-          <div class="contact-box">
+ 
+</div>
+     
+          <div style="float: right; margin-top:50px;">
               <i class="phone fa fa-phone"></i>{{basics.phone}}
               <br>
               <i class="email fa fa-envelope"></i><a class="no-style-a" href="mailto:{{basics.email}}">{{basics.email}}</a>
               <br>
-			   
-			  
-			  <!-- Profiles - Web Version -->
-			  <div class="prof-web">
-			  {{#profilesBool}}
-			  <center>
-			  {{#basics.profiles}}
-              <a class="no-style-a" href="{{url}}"><i class="big-icon fab fa-{{icon}}"></i></a>
-			  {{/basics.profiles}}
-			  <center>
-			  {{/profilesBool}}
-			  </div>
-			  <!-- End web version -->
-			  
-			  <!-- Profiles - Print Version -->
-			  <div class="prof-print">
+			   <i class="website fa fa-globe"></i><a class="no-style-a" href="https://grantsiders.com">grantsiders.com</a>
+			   <br>
+        
+         
 			  {{#profilesBool}}
 			  {{#basics.profiles}}
 			  <i class=" fab fa-{{icon}}"></i><a class="no-style-a" href="{{url}}">{{user}}</a>
@@ -301,60 +294,51 @@
 			  {{/basics.profiles}}
 			  {{/profilesBool}}
 			  </div> 
-			  <!-- End Print Version -->
-			 
-          </div>
-        </div>
+</div>
+</div>
+
        
-          <div class="left-heading">
-            <i class="far fa-dot-circle"></i>Summary
-          </div>
-		 <div class="row">
-	      	<div class="row-separator red-line-left">&nbsp;</div>
-	      </div>
-        <div class="row">
-        <div class="row">
+		
+	
+	
+      
+       
+
+
+    
+	  <!-- summary --> 
+      <div class="eight columns rightcolumn">
+      <div class="row first">
+      		<span class="section-heading"><i class="fa fa-dot-circle"></i>Summary</span>    	
+        </div>
+		<div class="row-separator red-line">&nbsp;</div>
+		<div class="row">
           <div class="objective-statement">
              {{basics.summary}}
           </div>
         </div>
-		</div>
-		 
-        <div class="row">
-          <div class="left-heading">
-            <i class="far fa-lightbulb"></i>Key Skills
-          </div>
-		  </div>
-		<div class="row">
-	      	<div class="row-separator red-line-left">&nbsp;</div>
-	      </div>
-		{{#skillsBool}}
-        <div class="row skills">
+
+<!-- skills --> 
+<div class="row first">
+      		<span class="section-heading"><i class="fa fa-lightbulb"></i>Key Skills</span>    	
+        </div>
+		<div class="row-separator red-line">&nbsp;</div>
+		<div class="skills-separator></div>
+
+        {{#skillsBool}}
+       <div class="row">
+			<div>
+			<ul class="job-ul">
 			{{#skills}}
-			<i class="fa fa-check"></i>{{name}}</br>
+			
+			<li class="job-highlights">{{name}}</li>
+			
 			{{/skills}}
-        </div>
+        </ul>
+			</div>
+			</div>
 		{{/skillsBool}}
-		
-		<div class="row">
-          <div class="left-heading">
-            <i class="fa fa-certificate"></i>Certifications
-          </div>
-		  </div>
-		<div class="row">
-	      	<div class="row-separator red-line-left">&nbsp;</div>
-	      </div>
-		{{#awardsBool}}
-        <div class="row skills">
-			{{#awards}}
-			<i class="fa fa-check"></i>{{title}}</br>
-			{{/awards}}
-        </div>
-		{{/awardsBool}}
-	
-      </div><!-- end left column -->
-      
-      <div class="eight columns rightcolumn">
+        <!-- work --> 
       	<div class="row first">
       		<span class="section-heading"><i class="fa fa-suitcase"></i>Work Experience</span>    	
         </div>
@@ -383,7 +367,7 @@
         </div>
 		{{#educationBool}}
 		{{#education}}
-		
+    
         <div class="row-separator red-line">&nbsp;</div>
       	<div class="row">
 				<div class="edu-details-web">
@@ -395,18 +379,13 @@
 					<div class="edu-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
 				</div>
 				</div>
-				<div class="edu-details-print">
-					<div class="edu-school">{{institution}}</div>
-					<div class="edu-degree">{{studyType}} in {{area}}</div>
-					<div class="edu-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
-				</div>
+				
 		</div>
        
 		{{/education}}
 		{{/educationBool}}
 		
-		
-    
+
       	<div class="row">
       		<span class="section-heading"><i class="fas fa-hands-helping"></i>Volunteer</span>    	
         </div>
@@ -433,6 +412,8 @@
       		<span class="section-heading"><i class="fas fa-bookmark"></i>Projects</span>    	
         </div>
 		<div class="row-separator red-line">&nbsp;</div>
+
+        <!-- PROJECTS -->
 		{{#projectBool}}
 		{{#project}}
 		
@@ -441,25 +422,14 @@
 			<div class="proj-web">
 				<div class="eight columns">
 					<div class="job"><a href="{{url}}">{{title}}</a></div>
-					<div class="proj-role">{{role}}</div>
+					<div class="proj-role" style="font-weight:bold;">{{role}}</div>
 				</div> 
 				<div class="four columns">
 					<div class="proj-details-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
 				</div>
 			</div>
 			<!-- End Web Formating -->
-			<!-- Print Formating --> 
-			<div class="proj-print">
-				<div class="six columns">
-					<div class="job">{{title}}</a></div>
-					<div class="proj-role">{{role}}</div>
-				</div> 
-				<div class="six columns">
-					<div class="proj-details-url"><a class="no-style-a" href="{{url}}">{{url}}</a></div>
-					<div class="proj-details-date">{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</div>
-				</div>
-			</div>
-			<!-- End Web Formating --> 
+			
 			
 			
 		</div>
@@ -475,6 +445,7 @@
 	
 		{{/project}} 
         {{/projectBool}}
+        <!-- END PROJECTS -->
       </div><!-- close right column -->   
 	  </div> <!-- close all row -->
     </div> <!-- close container -->
