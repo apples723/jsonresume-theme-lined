@@ -1,6 +1,5 @@
 # JSONRESUME-THEME-LINED
 - Modern Theme
-- One Page Resume
 - Sectioned off by lines
 - Uses FontAwesome Icons
 - Two Version: Print and Web
@@ -8,7 +7,7 @@
 - Self contained
 - Uses the [JSON Resume Schema](https://github.com/jsonresume/resume-schema)
 - Resum generated with [hackmyresume](https://github.com/hacksalot/HackMyResume)
-- [live demo](http://grantsiders.com/resume)
+- [live demo](https://grantsiders.com/resume)
 # Two Versions 
 - Print - More suitable for printing to PDF or Paper 
 - WEB - More suitable for the web.
